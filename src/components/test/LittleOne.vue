@@ -6,7 +6,11 @@
 </template>
 
 <script>
+import TextDemo from './TextDemo'
 export default {
-  name: 'LittleOne'
+  name: 'LittleOne',
+  conponents: {
+    TextDemo
+  }
 }
 </script>

@@ -1,5 +1,3 @@
-/*  */
-
 import Vue from 'vue' // 使用 import 命令加载 Vue 构建版本
 import App from './App'
 import router from './router'
@@ -8,7 +6,7 @@ Vue.config.productionTip = false
 
 
 
-/*  */
+/* 全局注册组件 */
 new Vue({
   el: '#app',
   router,

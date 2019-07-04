@@ -4,10 +4,13 @@
     <slot name="second"></slot>
     <p>{{ title }}</p>
     <button @click="$emit('update:title', newTitle)">Update title</button>
+    <LittleOne></LittleOne>
   </div>
 </template>
 
 <script>
+import LittleOne from './LittleOne'
+
 export default {
   name: 'TextDemo',
   props: ['title'],
@@ -16,6 +19,9 @@ export default {
       newTitle: 'This is newTitle',
       content: 'This is content, and I was changed'
     }
+  },
+  components: {
+    LittleOne
   }
 }
 </script>

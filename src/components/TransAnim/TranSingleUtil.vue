@@ -2,7 +2,8 @@
   <fieldset>
     <legend>{{ title }}</legend>
     <button @click="show = !show">Toggle</button>
-    <transition :name="name">
+    <!-- type告诉Vue要监听的类型是animation还是transition，如果只用其中一种，Vue能自动识别类型并设置监听 -->
+    <transition :name="name" :type="type">
       <p v-if="show">
         When "show === true", I will show !
       </p>
@@ -13,22 +14,33 @@
 <script>
 export default {
   name: 'TranSingleUtil',
-  props: ['title', 'name'],
+  props: ['title', 'name', 'type'],
   data () {
     return { show: true }
   }
 }
 </script>
 
-<style>
-fieldset {
-  display: inline-block;
-  width: 45%;
-  height: 100px;
-  margin: 10px 0;
-  padding: 20px;
-  text-align: left;
-  vertical-align: top;
-  border-radius: 10px;
+<style scoped>
+/* CSS 过渡 */
+.fade-enter-active { transition: all .5s ease; }
+.fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.fade-enter, .fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+/* CSS 动画 */
+.bounce-enter-active {
+  animation: bounce-in 1s;
+}
+.bounce-leave-active {
+  animation: bounce-in 1s reverse;
+}
+@keyframes bounce-in {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 </style>

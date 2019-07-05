@@ -1,15 +1,16 @@
 <template>
   <div>
-    <TranSingleUtil
+    <TranUtil
       v-for="(msg, i) in msgs"
       v-bind:key="i"
+      :toggle="true"
       v-bind="msg"
-    ></TranSingleUtil>
+    ></TranUtil>
   </div>
 </template>
 
 <script>
-import TranSingleUtil from './TranSingleUtil'
+import TranUtil from './TranUtil'
 
 export default {
   name: 'TranSingle',
@@ -22,7 +23,7 @@ export default {
     }
   },
   components: {
-    TranSingleUtil
+    TranUtil
   }
 }
 </script>

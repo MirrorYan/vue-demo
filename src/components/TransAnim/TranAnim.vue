@@ -15,7 +15,7 @@
     </div>
     <div class="content">
       <h2>2.4 列表过渡</h2>
-      <TranMultiCom></TranMultiCom>
+      <TranListCom></TranListCom>
     </div>
   </div>
 </template>
@@ -24,13 +24,15 @@
 import TranSingle from './TranSingle'
 import TranMultiEle from './TranMultiEle'
 import TranMultiCom from './TranMultiCom'
+import TranListCom from './TranListCom'
 
 export default {
   name: 'TransAnim',
   components: {
     TranSingle,
     TranMultiEle,
-    TranMultiCom
+    TranMultiCom,
+    TranListCom
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section-container">
     <p>多个组件的过渡不需要使用<i>key</i>特性，需要使用<b>动态组件</b></p>
     <fieldset>
       <legend>使用动态组件</legend>

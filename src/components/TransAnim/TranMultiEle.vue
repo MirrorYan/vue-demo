@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section-container">
     <p>
       多个相同标签名的元素切换时需要通过
       <i>key</i>

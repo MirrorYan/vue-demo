@@ -39,9 +39,14 @@ export default {
 
 <style>
 h2 { text-align: center; }
-fieldset {
-  display: inline-block;
-  width: 46%;
+p { width: 100%; }
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-container fieldset {
+  width: calc(50% - 20px);
+  margin: 5px 10px;
   min-height: 100px;
   padding: 20px;
   text-align: left;
@@ -52,7 +57,10 @@ fieldset {
 .content {
   margin-bottom: 40px;
 }
-.content fieldset {
-  margin: 5px 2% 5px 2%;
+.notice-text {
+  padding: 10px 15px;
+  background-color: antiquewhite;
+  border-left: 5px solid #ff8f80;
+  border-radius: 0 5px 5px 0;
 }
 </style>

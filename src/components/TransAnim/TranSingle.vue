@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section-container">
     <TranUtil
       v-for="(msg, i) in msgs"
       v-bind:key="i"

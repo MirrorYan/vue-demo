@@ -11,23 +11,6 @@
 
 <script>
 export default {
-  name: 'HelloWorld'
+  name: 'HomePage'
 }
 </script>
-
-<style>
-h1, h2 { font-weight: normal; }
-ol {
-  display: inline-block;
-  list-style-type: decimal;
-}
-li { margin: 0 10px; }
-</style>
-<style scoped>
-div {
-  text-align: center;
-}
-ul {
-  text-align: left;
-}
-</style>

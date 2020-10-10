@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import InputFather from '@/components/InputFather'
-import TransAnim from '@/components/TransAnim/TranAnim'
+import Vue from 'vue';
+import Router from 'vue-router';
+import PageHome from '@/components/PageHome';
+import InputFather from '@/components/InputFather';
+import TransAnim from '@/components/TransAnim/TranAnim';
 
 Vue.use(Router)
 
@@ -10,16 +10,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      title: '首页',
+      component: PageHome,
+      icon: 'el-icon-s-home'
+    }, {
+      path: '/computed&watch',
+      title: '计算属性&侦听器',
+      icon: 'el-icon-set-up'
     }, {
       path: '/input',
-      name: 'InputFather',
+      title: 'InputFather',
       component: InputFather
     }, {
       path: '/trans&anim',
-      name: 'TransAnim',
+      title: 'TransAnim',
       component: TransAnim
     }
   ]
-})
+});

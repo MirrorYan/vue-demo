@@ -10,8 +10,8 @@ export default new Router({
       name: 'HomePage',
       component: () => import('@/views/Home'),
       meta: {
-        title: '首页',
-        icon: 'el-icon-s-home',
+        title: '目录',
+        icon: 'el-icon-tickets',
       }
     }, {
       path: '/computed&watch',

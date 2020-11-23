@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" v-title data-title="目录">
     <ol>
       <li><a href="#/input">通过父组件获取子组件元素焦点</a></li>
       <li>

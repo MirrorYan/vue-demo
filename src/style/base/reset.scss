@@ -2,13 +2,17 @@
  * Reset default style
  */
 
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'SimSun', sans-serif;
+  font-family: 'ZCOOL KuaiLe';
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 p {

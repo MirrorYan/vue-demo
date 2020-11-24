@@ -1,0 +1,19 @@
+%clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// Font face
+@mixin font-face($family, $file, $weight: normal, $style: normal, $stretch: normal) {
+  @font-face {
+    font-family: $family;
+    src: url("#{$file}.eot");
+    src: url("#{$file}.eot#iefix") format("embedded-opentype"),
+         url("#{$file}.woff2") format("woff2"),
+         url("#{$file}.woff") format("woff"),
+         url("#{$file}.ttf") format("truetype");
+  }
+}

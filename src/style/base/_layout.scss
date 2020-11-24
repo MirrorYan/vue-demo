@@ -1,0 +1,19 @@
+
+code {
+  display: inline;
+  padding: 2px 5px;
+  margin: 0 3px;
+  background-color: rgba($color-blue, .2);
+  border-radius: 5px;
+}
+
+/* --- ElementUI Style ---*/
+// Ele-Menu
+.el-menu-item {
+  font-size: 1em;
+}
+
+// Ele-Form
+.el-form-item__label {
+  font-size: 1rem;
+}

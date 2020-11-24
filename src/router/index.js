@@ -10,7 +10,7 @@ export default new Router({
       name: 'HomePage',
       component: () => import('@/views/Home'),
       meta: {
-        title: '目录',
+        title: '首页',
         icon: 'el-icon-tickets',
       }
     }, {

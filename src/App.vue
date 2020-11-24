@@ -19,6 +19,8 @@ export default {
 </script>
 
 <style lang="scss">
+@include font-face($font-primary, './assets/fonts/ZCOOLKuaiLe-Regular');
+
 #app {
   width: 100%;
   height: 100vh;
@@ -29,7 +31,7 @@ export default {
     overflow: auto;
   }
   .container {
-    padding: 1%;
+    padding: 1em;
   }
 }
 </style>

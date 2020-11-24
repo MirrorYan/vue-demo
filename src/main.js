@@ -13,7 +13,6 @@ Vue.use(ElementUI);
 /* --- 注册全局指令 --- */
 Vue.directive('title', {
   inserted (el, binding) {
-    console.log(el)
     document.title = el.dataset.title;
   }
 });

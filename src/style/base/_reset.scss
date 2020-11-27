@@ -35,3 +35,12 @@ p {
     margin-top: 10px;
   }
 }
+
+input {
+  font-size: inherit;
+  border: 1px solid #DCDFE6;
+}
+
+label + input {
+  margin-left: 10px;
+}

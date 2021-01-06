@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SideMenu from '@/components/SideMenu';
+import SideMenu from '@/components/Menu/SideMenu';
 
 export default {
   name: 'App',

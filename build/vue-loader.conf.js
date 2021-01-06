@@ -6,6 +6,8 @@ const sourceMapEnabled = isProduction
   ? config.build.productionSourceMap
   : config.dev.cssSourceMap
 
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+
 module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
@@ -18,5 +20,13 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
+  },
+  chainWebpack: conf => {
+    conf.plugin('monaco-editor').use(MonacoWebpackPlugin, [
+      {
+        // Languages are loaded on demand at runtime
+        languages: ['json', 'javascript', 'html', 'css']
+      }
+    ])
   }
 }

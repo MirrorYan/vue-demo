@@ -14,15 +14,18 @@
         <span>{{ reverseMsg }}</span>
       </el-form-item>
     </el-form>
+    <MonacoEditor class="js-code" language="javascript" theme="vs-dark" :automaticLayout="true" v-model="code" />
   </Paragraph>
 </template>
 
 <script>
-import Paragraph from '@/components/Paragraph';
+import Paragraph from '@/components/Paragraph/Paragraph';
+import MonacoEditor from 'vue-monaco';
 
 export default {
   components: {
-    Paragraph
+    Paragraph,
+    MonacoEditor
   },
   data () {
     return {
@@ -31,7 +34,8 @@ export default {
         ques1: {
           title: '什么是计算属性'
         }
-      }
+      },
+      code: 'const noop = () => {}'
     }
   },
   computed: {
@@ -49,5 +53,9 @@ export default {
   .el-form-item {
     margin-bottom: 5px;
   }
+}
+
+.js-code {
+  height: 500px;
 }
 </style>

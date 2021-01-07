@@ -1,5 +1,12 @@
 <template>
-  <MonacoEditor class="editor" :value="code" :language="language" />
+  <MonacoEditor
+    class="editor"
+    theme="vs-dark"
+    :value="value"
+    :language="language"
+    :readOnly="readOnly"
+    :automaticLayout="true"
+  />
 </template>
 
 <script>
@@ -11,9 +18,13 @@ export default {
   },
   props: {
     language: String,
-    code: {
+    value: {
       type: String,
       default: ''
+    },
+    readOnly: {
+      type: Boolean,
+      default: false
     }
   }
 }

@@ -14,18 +14,39 @@
         <span>{{ reverseMsg }}</span>
       </el-form-item>
     </el-form>
-    <MonacoEditor class="js-code" language="javascript" theme="vs-dark" :automaticLayout="true" v-model="code" />
+    <CodeEditor class="html-code" language="html" :value="codeHtml" />
+    <CodeEditor class="js-code" language="javascript" :value="codeJS" />
   </Paragraph>
 </template>
 
 <script>
 import Paragraph from '@/components/Paragraph/Paragraph';
-import MonacoEditor from 'vue-monaco';
+import CodeEditor from '@/components/Code/CodeEditor';
+
+const codeHtml = 
+`<div>
+  <p>正常值：<input type="text" v-model="msg"></p>
+  <p>翻转值：{{ reverseMsg }}</p>
+</div>`;
+const codeJS = 
+`{
+  // ...
+  data() {
+    return {
+      msg: 'Hello'
+    }
+  },
+  computed: {
+    reverseMsg () {
+      return this.msg.split('').reverse().join('');
+    }
+  }
+}`;
 
 export default {
   components: {
     Paragraph,
-    MonacoEditor
+    CodeEditor
   },
   data () {
     return {
@@ -35,7 +56,8 @@ export default {
           title: '什么是计算属性'
         }
       },
-      code: 'const noop = () => {}'
+      codeHtml,
+      codeJS
     }
   },
   computed: {
@@ -56,6 +78,6 @@ export default {
 }
 
 .js-code {
-  height: 500px;
+  height: 300px;
 }
 </style>

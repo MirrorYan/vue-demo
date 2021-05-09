@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "element-ui": "^2.13.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "monaco-editor-webpack-plugin": "^2.1.0",
     "velocity-animate": "^2.0.5",
     "vue": "^2.5.2",
